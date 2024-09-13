@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0b0c10; /* Fondo oscuro */
+            color: #f0f0f0; /* Texto claro */
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        header {
+            background-color: #6a0dad; /* Color púrpura oscuro */
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 3em;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: #fff;
+            opacity: 0;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Genera estrellas en posiciones aleatorias */
+        .star:nth-child(1) { top: 10%; left: 10%; width: 2px; height: 2px; animation-duration: 1.5s; }
+        .star:nth-child(2) { top: 20%; left: 25%; width: 3px; height: 3px; animation-duration: 2s; }
+        .star:nth-child(3) { top: 35%; left: 45%; width: 1px; height: 1px; animation-duration: 1.8s; }
+        .star:nth-child(4) { top: 50%; left: 60%; width: 2px; height: 2px; animation-duration: 2.2s; }
+        .star:nth-child(5) { top: 65%; left: 75%; width: 4px; height: 4px; animation-duration: 2s; }
+        .star:nth-child(6) { top: 80%; left: 15%; width: 3px; height: 3px; animation-duration: 1.5s; }
+        .star:nth-child(7) { top: 40%; left: 85%; width: 2px; height: 2px; animation-duration: 2.2s; }
+        .star:nth-child(8) { top: 25%; left: 55%; width: 3px; height: 3px; animation-duration: 1.8s; }
+        .star:nth-child(9) { top: 80%; left: 20%; width: 1px; height: 1px; animation-duration: 2s; }
+        .star:nth-child(10) { top: 90%; left: 30%; width: 2px; height: 2px; animation-duration: 1.5s; }
+
+        /* Estrella fugaz */
+        .shooting-star {
+            position: absolute;
+            top: 20%;
+            left: 60%;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(45deg, #ff0, transparent);
+            border-radius: 50%;
+            animation: shoot 3s infinite;
+            transform: rotate(45deg);
+        }
+
+        @keyframes shoot {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            margin-top: 20px;
+        }
+
+        .description {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            margin-top: 30px;
+        }
+
+        .button .botones {
+            background-color: #6a0dad;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .button .botones a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .button .botones:hover {
+            background-color: #4b0082; /* Color púrpura más oscuro */
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 1.2em;
+            color: #aaa;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>¡Feliz Cumpleaños!</h1>
+    </header>
+
+    <div class="stars">
+        <!-- Estrellas generadas con CSS -->
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <!-- Estrella fugaz -->
+        <div class="shooting-star"></div>
+    </div>
+
+    <div class="content">
+        <div class="description">
+            <span>😊 ¡ya son dieciocho! 😊</span>
+        </div>
+        <div class="button">
+            <button class="botones">
+                <a href="index(2).html">¡presiona aquí!</a>
+            </button>
+        </div>
+    </div>
+
+    <!-- Créditos -->
+    <footer>
+        <p>&copy; Hecho por Bis :b.</p>
+    </footer>
+</body>
+
+</html>
